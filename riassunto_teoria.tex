@@ -1,0 +1,119 @@
+% ---------------- RELAZIONE PROGETTO DI PROGRAMMAZIONE AD OGGETTI (OOP) --------
+\documentclass[a4paper,12pt]{report}
+
+% ----------------------------- PREAMBLE --------------------------------------- 
+
+\usepackage{lmodern}
+\usepackage{alltt, fancyvrb, url}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{amsmath,amssymb,amsthm}
+
+% Questo commentalo se vuoi scrivere in inglese.
+\usepackage[italian]{babel}
+
+\usepackage[italian]{cleveref}
+
+\usepackage{comment}
+\usepackage{microtype}
+\usepackage{fancyhdr}
+
+\usepackage[scaled=.92]{helvet}
+\usepackage[T1]{fontenc}
+
+\usepackage{lscape}
+
+% hyperref settings
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black, %blue
+	filecolor=magenta,      
+	urlcolor=cyan,
+	pdftitle={Sharelatex Example},
+	bookmarks=true,
+	pdfpagemode=FullScreen,
+}
+
+% ----------------------------- PREAMBLE END -----------------------------------
+
+\makeindex
+
+\title{\textbf{FORMULARIO MDP}}
+\author{Alessandro Pioggia}
+
+\begin{document}
+	
+	\makeatletter
+	\begin{titlepage}
+		\begin{center}
+			{\Huge  \@title }\\[3ex] 
+			{\large  \@author}\\[3ex] 
+			{\large \@date}
+		\end{center}
+	\end{titlepage}
+	\makeatother
+	\thispagestyle{empty}
+	\newpage
+	
+	%\maketitle
+	
+	\tableofcontents
+	
+	% \input: import the commands from filename.tex to target file.
+	
+	% \include: does a \clearpage and does an \input.
+		
+	\newpage
+	
+	\section{Combinatoria - Lezione 1}
+	\subsection{Cos'è la cardinalità di un insieme? Cos'è una corrispondenza biunivoca tra insiemi? Cosa significa insieme numerabile?}
+	Supponendo di avere un insieme A con n elementi, n è la cardinalità. 
+	Supponendo di avere due insiemi A e B, definiamo una funzione $f(A) : B$, se  è sia suriettiva che iniettiva i due insiemi sono in corrispondenza biunivoca(ovvero è possibile associare a ciascun elemento di un insieme uno ed uno solo elemento dell'altro).
+	Un insieme viene detto numerabile se i suoi elementi sono in numero finito o se  possono essere messi in corrispondenza biunivoca con i numeri naturali. Se riesco ad elencare un insieme tramite un elenco infinito è numerabile e viceversa.
+	\subsection{Esempio di insieme numerabile e non numerabile}
+	Esempio di insiemi numerabili: 
+	\begin{itemize}
+		\item $P = \{0, 2, 4, 6, ...\}$ $\leftrightarrow$ $\mathbb{N} = \{0, 1, 2, 3, ...\}$ con $f(x) = 2y$
+		\item $\mathbb{Z} = \{0, 1, -1, 2, -2, ..\}$ $\leftrightarrow$ $\mathbb{N} = \{0, 1, 2, 3, ...\}$ con $f(z) = 2z - 1$ se $z \ge 0$, $f(z) = -2z$ se $z \leq 0$
+	\end{itemize}
+	Esempio di insiemi non numerabili:
+	\begin{itemize}
+		\item L'insieme $\mathbb{R}$
+		\item $A$ = \{ Sequenze binarie di lunghezza infinita \}
+	\end{itemize}
+	\subsection{Che cos'è il prodotto cartesiano?}
+	Dati due insiemi A e B, il prodotto cartesiano rappresentato da $A \times B$ non è altro che l'insieme delle coppie ordinate $(a, b)$ con $a \in A$ e $b \in B$ (Dunque (a, b) != (b, a)). Formalmente : $A \times B$ = $\{(a, b) | a \in A, b \in B \}$
+	\subsection{Quanti sottoinsiemi ha un insieme con n elementi?}
+	Ne ha $2^n$, il risultato lo si ottiene conoscendo l'insieme delle parti(si indica con $p(A)$) e le sue proprietà.
+	L'insieme delle parti è appunto il numero di sottoinsiemi di un dato insieme, per giungere alla risposta occorre sfruttare una logica(supponendo di considerare un insieme A con cardinalità n).
+	Vogliamo dimostrare che : se $|A| = n$, allora $|p(A)| = 2^n$, dunque ragioniamo in questi termini : 
+	\begin{itemize}
+		\item fra $p(A)$ e $\{0, 1\}^n$ c'è una corrispondenza biunivoca.
+		\item dal principio di uguaglianza abbiamo che, dal momento che esiste una corr. biunivoca,  $|p(A)| = |\{0, 1\}^n|$
+		\item dal principio della moltiplicazione otteniamo che $|\{0, 1\}^n| = |\{0,1\}|^n = 2^n$  
+	\end{itemize}
+	\subsection{Che cos'è una lista?}
+	Gli elementi di una potenza cartesiana si dicono liste o sequenze in A e hanno cardinalità n.
+	Esempio : \\
+	$A^3$ ha una lunghezza delle sequenze o liste pari a 3
+	\subsection{Parla dei prodotti condizionati}
+	$S \subseteq A \times B$, S è un prodotto condizionato $\leftrightarrow$ posso scegliere la prima coordinata di un elemento di S in n modi e la seconda coordinata, una volta fissata la prima, in m. \\
+	Se $S \subseteq A \times B$ è un prodotto condizionato di tipo (n, m) allora $|S| = n \cdot m$. \\
+	Dimostrazione : 
+	\begin{itemize}
+		\item dividiamo $S$ in n sottoinsiemi disgiunti tali che : $\{S_1 \cup S_2 \cup ... \cup S_n\}$
+		\item $S_i$ = $\{$ tutti gli elementi di $S$ con prima coordinata $a_i \in A \}$
+		\item per definizione abbiamo dunque che $|S_i| = m$
+		\item dal momento che i sottoinsiemi considerati sono disgiunti(dal momento che rispettano le condizioni del prodotto condizionato), otteniamo che $S$ = $\{S_1 + S_2 + ... + S_n\}$
+		\item $|S|$ = $\{|S_1| + |S_2| + ... + |S_n|\}$ = $\{ m + m + ... + m \}$ = $m \cdot n$
+	\end{itemize}
+	\subsection{Che cosa sono le disposizioni?}
+	Una disposizione di lunghezza k su un insieme di cardinalità n, è una sequenza in cui all'interno non ci sono valori ripetuti. Formalmente : $\{a_1, a_2, ..., a_k\}$ con $a_i \neq a_j$ e $j = i + 1$ è una disposizione di lunghezza k. \\
+	Una disposizione lunga k su un insieme di n elementi è esprimibile come prodotto condizionato di tipo : $(n, n-1, n-2, ..., n-k)$, questo perchè una volta che seleziono la prima coordinata, se la seconda deve essere distinta ho n-1 scelte e così via... \\
+	Dalla proprietà dei prodotti condizionati dimostrata in precedenza abbiamo che |disposizioni| = $(n \cdot n-1 \cdot n - 2 \cdot ... \cdot n-k)$.
+	Se ho k = n $\rightarrow$ |disposizioni| = n!, vengono chiamate permutazioni.
+	
+	
+\end{document}
