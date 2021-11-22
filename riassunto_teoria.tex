@@ -114,6 +114,32 @@
 	Una disposizione lunga k su un insieme di n elementi è esprimibile come prodotto condizionato di tipo : $(n, n-1, n-2, ..., n-k)$, questo perchè una volta che seleziono la prima coordinata, se la seconda deve essere distinta ho n-1 scelte e così via... \\
 	Dalla proprietà dei prodotti condizionati dimostrata in precedenza abbiamo che |disposizioni| = $(n \cdot n-1 \cdot n - 2 \cdot ... \cdot n-k)$.
 	Se ho k = n $\rightarrow$ |disposizioni| = n!, vengono chiamate permutazioni.
+	\subsection{Definisci le combinazioni, illustra inoltre la correlazione che c'è fra esse e le disposizioni, di conseguenza mostra come contare il numero di combinazioni}
+	Considerando un insieme A con $\{1, ..., n\}$ elementi, le combinazioni di A sono tutti i suoi sottoinsiemi di cardinalità k. Per contare il numero di combinazioni lunghe k di un insieme con n elementi è possibile sfruttare la correlazione che c'è fra disposizioni e combinazioni. Per ogni combinazione lunga k esistono esattamente k! disposizioni, infatti se mettiamo a funzione disposizioni e combinazioni otteniamo una funzione suriettiva(disposizioni $\rightarrow$ combinazioni). A questo proposito deduciamo che : $|combinazioni| = \dfrac{n_{(k)}}{k!}$.
+	\subsection{Come possiamo contare con precisione il numero di anagrammi di una parola?}
+	Possiamo sfruttare le combinazione di tipo (a, b, c), con |a| + |b| + |c| = n.
+	Gli anagrammi di tipo (a, b, c)  sono le sequenze ordinate in cui appare lo 0 a volte, l'1 b volte, il 2 c volte.
+	Inoltre è possibile mettere in biezione le combinazioni di tipo (a, b, c) con le sequenze ternarie ordinate di sottoinsiemi($s_1, s_2, s_3$), in cui $|s_1|$ = a, $|s_2|$ = b, $|s_3|$ = c.(In $s_1$ inserisco gli indice posizionali degli 0 che appaiono, di conseguenza lo faccio anche con $s_2$ e $s_3$).
+	Inoltre abbiamo che $s_1 \cup s_2 \cup s_3 = \{0, ..., n\}$
+	\subsection{Definisci la funzione ricorsiva di Stifel}
+	La funzione ricorsiva di Stifel è la seguente : $\sum_{k = 0}^{n/2}(\binom{n - 1}{k} + \binom{n - 1}{k - 1})$ \\
+	Per dimostrarne la correttezza è sufficiente suddividere l'insieme preso in considerazione in due sottoinsiemi, che chiameremo A e B.
+	A = { insiemi che contengono n }
+	B = { insiemi che non contengono n} \\
+	Gli insiemi che non contengono n sono $\binom{n - 1}{k}$, ovvero escludo dalla conta del numero dei sottoinsiemi lo stesso n. Per quanto riguarda A invece, possiamo ottenere il valore $\binom{n - 1}{k - 1}$ perchè considero tutti i sottoinsiemi di cardinalità k - 1 con n escluso, dopodichè n verrà aggiunto a ciascun sottoinsieme.
+	\subsection{Parlami dei numeri di Fibonacci}
+	I numeri di Fibonacci sono l'insieme delle sequenze di bit che non presentano due 1 consecutivi. \\
+	Formula : $f_n = f_{n - 1} \cdot f_{n - 2}$ \\
+	Per dimostrare la correttezza della formula è sufficiente suddividere le sequenze fra quelle che: 
+	\begin{itemize}
+		\item iniziano con 1 : prendo n-2 elementi ed aggiungo all'inizio qualsiasi coppia che non sia (1, 1).  
+		\item iniziano con 0 : prendo n-1 elementi ed aggiungo 0 all'inizio.
+	\end{itemize}
+	C'è anche una formula alternativa per calcolare i numeri di fibonacci : $\sum_{k = 0}^{n/2}\binom{n - k + 1}{k}$ \\
+	Dimostrazione : \\
+	In pratica in questo caso prendiamo una sequenza e togliamo tutti gli zeri, quindi abbiamo tutti piccoli insiemi che contengono sequenze con soli 1. Funziona perchè so che per rispettare le condizioni, ogni 1 della sequenza deve essere affiancato da uno 0, tranne eventualmente se l'1 ricopre l'ultima posizione, dunque ho n - k zeri - 1(che sta in fondo).
+	
+	
 	
 	
 \end{document}

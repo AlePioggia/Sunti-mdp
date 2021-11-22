@@ -1,0 +1,12 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {section}{\numberline {0.1}Combinatoria - Lezione 1}{2}{section.0.1}%
+\contentsline {subsection}{\numberline {0.1.1}Cos'è la cardinalità di un insieme? Cos'è una corrispondenza biunivoca tra insiemi? Cosa significa insieme numerabile?}{2}{subsection.0.1.1}%
+\contentsline {subsection}{\numberline {0.1.2}Esempio di insieme numerabile e non numerabile}{2}{subsection.0.1.2}%
+\contentsline {subsection}{\numberline {0.1.3}Che cos'è il prodotto cartesiano?}{2}{subsection.0.1.3}%
+\contentsline {subsection}{\numberline {0.1.4}Quanti sottoinsiemi ha un insieme con n elementi?}{2}{subsection.0.1.4}%
+\contentsline {subsection}{\numberline {0.1.5}Che cos'è una lista?}{3}{subsection.0.1.5}%
+\contentsline {subsection}{\numberline {0.1.6}Parla dei prodotti condizionati}{3}{subsection.0.1.6}%
+\contentsline {subsection}{\numberline {0.1.7}Che cosa sono le disposizioni?}{3}{subsection.0.1.7}%
+\contentsline {subsection}{\numberline {0.1.8}Definisci le combinazioni, illustra inoltre la correlazione che c'è fra esse e le disposizioni, di conseguenza mostra come contare il numero di combinazioni}{4}{subsection.0.1.8}%
+\contentsline {subsection}{\numberline {0.1.9}Come possiamo contare con precisione il numero di anagrammi di una parola?}{4}{subsection.0.1.9}%
