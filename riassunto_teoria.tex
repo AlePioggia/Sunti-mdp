@@ -138,8 +138,29 @@
 	C'è anche una formula alternativa per calcolare i numeri di fibonacci : $\sum_{k = 0}^{n/2}\binom{n - k + 1}{k}$ \\
 	Dimostrazione : \\
 	In pratica in questo caso prendiamo una sequenza e togliamo tutti gli zeri, quindi abbiamo tutti piccoli insiemi che contengono sequenze con soli 1. Funziona perchè so che per rispettare le condizioni, ogni 1 della sequenza deve essere affiancato da uno 0, tranne eventualmente se l'1 ricopre l'ultima posizione, dunque ho n - k zeri - 1(che sta in fondo).
-	
-	
-	
+	\subsection{Raccontami il principio di inclusione-esclusione}
+	Il principio di inclusione-esclusione permette di calcolare la cardinalità di un insieme, espresso come unione di n insiemi finiti. \\
+	In formule(Si ricorda che I	è l'insieme di sottoinsiemi di un insieme con {1, ..., n} elementi) : 
+	\begin{itemize}
+		\item $|A_1 \cup A_2 \cup ... \cup A_n| = \sum_{I \in {0, ..., n}}(-1)^{|I|-1} \cdot \prod_{i \in I}|A_i| $
+	\end{itemize}
+	Detto ciò sappiamo che molto spesso viene sfruttata la formula che ci permette di arrivare al complementare. Per fare ciò è opportuno conoscere l'insieme universo U, che contiene tutti gli elementi e tutti gli insiemi esistenti(quindi anche sè stesso e l'insieme vuoto). Prima di enunciare la formula è importante sapere che : $|U| = |\prod_{i \in 0}A_i|$. \\ \\
+	$|(A_1 \cup A_2 \cup ... \cup A_n|)^c = |U| -  \sum_{I \in {0, ..., n}}(-1)^{|I|-1} \cdot \prod_{i \in I}|A_i|$ \\\\
+	= $|\prod_{i \in 0}A_i| - \sum_{0 \neq I \in {0, ..., n}}(-1)^{|I|-1} \cdot \prod_{i \in I}|A_i|$  \\\\
+	= $|\prod_{i \in 0}A_i| + \sum_{0 \neq I \in {0, ..., n}}(-1)^{|I|} \cdot \prod_{i \in I}|A_i|$ \\\\
+	= $\sum_{I \in {0, ..., n}}(-1)^{|I|} \cdot \prod_{i \in I}|A_i|$
+	\subsection{Come faccio a contare il numero di funzioni iniettive?} 
+	RECAP : Una funzione iniettiva è definita tale se elementi distinti del dominio hanno immagini distinte. \\
+	Supponendo di avere una funzione iniettiva $f:A \rightarrow B$ con m $\leq$ n(poniamo |A| = m e |B| = n), il numero di funzioni iniettive è $n_{m}$ infatti, piccolo appunto, non è altro che un prodotto condizionato di tipo (n - 1, n-2,  ..., n-m).
+	\subsection{Come faccio a contare il numero di funzioni suriettive?}
+	RECAP : Una funzione suriettiva è definita tale se ogni elemento del codominio ha come immagine almeno un elemento del dominio.
+	Supponendo di avere una funzione suriettiva $f:A \rightarrow B$ con m $\geq$ n, (poniamo ancora |A|=m e |B|=n), il numero di funzioni suriettive è possibile calcolarlo sfruttando il principio di inclusione-esclusione.
+	Supponiamo di avere un insieme A composto da n sottoinsiemi, ovvero A = $\{A_1 \cup A_2 \cup ... \cup A_n\}$ \\ in cui definiamo $A_i$ = \{ tutte le funzioni in cui l'elemento i $\notin$ Imf \}, la sua cardinalità è : $|A_i| = (n - 1)^m$, stessa regola la usiamo per l'intersezione, ovvero $|A_i \cap A_j| = (n - 2)^m$ e dunque generalizzando avremo che : \\ $|\prod_{I \in {0...n}}A_i| = (n - |I|)^m$ In seguito a questa deduzione osserviamo che se, la nostra funzione appartiene anche solo ad uno degli $|A_i|$ insiemi, non può essere definita suriettiva, dal momento che ogni elemento del codominio deve avere come immagine almeno un elemento del dominio. Quindi per contare il numero di funzioni suriettive occorre calcolare  il complementare dell'insieme che abbiamo preso in considerazione prima, ovvero $|(A_1 \cup A_2 \cup ... \cup A_n)^c|$, sfruttando il principio di inclusione-esclusione. \\ \\
+	 $|(A_1 \cup A_2 \cup ... \cup A_n)^c| = |\prod_{I \in {0...n}}A_i| - \sum_{0 \neq i \in I}(-1)^{(|I| - 1)}|\prod_{I \in {0...n}}A_i|$ \\ \\
+	 = 
+	 = $\sum_{i \in I}(-1)^{(|I|)} \cdot (n - |I|)^m$ \\ \\
+	 = $\sum_{k = 0}^{n}(-1)^k \cdot \binom{n}{k} \cdot (n - k)^m$
+	 
+	 
 	
 \end{document}
