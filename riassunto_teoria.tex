@@ -228,14 +228,15 @@
 	Formalmente, supponendo di avere 3 eventi A, B e C, con C che è intersecato sia ad A che a B:
 	$P(C) = P(C \cap A) + P(C \cap B) = P(C) \cdot P(A|C) + P(C) \cdot P(B|C)$
 	\subsection{Cos'è una variabile aleatoria?}
-	Data una funzione $X:\Omega \rightarrow \mathbb{R}$, $X$ è una variabile aleatoria se: \\ $\{\omega \in \Omega | X(\omega) \leq a\}$ \\ per ogni $a \in \mathbb{R}$ è un evento.
+	E' una quantità che dipende dal risultato del fenomeno aleatorio.
+	Data una funzione $X:\Omega \rightarrow \mathbb{R}$, $X$ è una variabile aleatoria se: \\ $\{\omega \in \Omega | X(\omega) \leq a\}$ \\ è un evento per ogni $a \in \mathbb{R}$.
 	\subsection{Parlami della densità}
 	Partiamo differenziando due tipi di densità, quella discreta e quella astratta.\\
 	Densità discreta: \\
 	Data  una variabile aleatoria discreta X, prende il nome di densità discreta la funzione $p_x : \mathbb{R} \rightarrow \mathbb{R}$ tale che $p_x(h) = P(x = h)$ con $h$ numero intero. Per essere definita tale deve soddisfare 3 proprietà:
 	\begin{itemize}
-		\item $p_x(h) \geq 0$
-		\item $p_x(h) \neq 0$
+		\item $p_x(h) \geq 0$ per ogni $h \in \mathbb{R}$
+		\item $p_x(h) \neq 0$ per una quantità al più numerabile di valori h
 		\item $\sum_{\forall h \in \mathbb{R}} p_x(h) = 1$
 	\end{itemize}
 	Densità astratta: \\

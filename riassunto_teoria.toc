@@ -1,12 +1,62 @@
 \babel@toc {italian}{}\relax 
 \babel@toc {italian}{}\relax 
-\contentsline {section}{\numberline {0.1}Combinatoria - Lezione 1}{2}{section.0.1}%
-\contentsline {subsection}{\numberline {0.1.1}Cos'è la cardinalità di un insieme? Cos'è una corrispondenza biunivoca tra insiemi? Cosa significa insieme numerabile?}{2}{subsection.0.1.1}%
-\contentsline {subsection}{\numberline {0.1.2}Esempio di insieme numerabile e non numerabile}{2}{subsection.0.1.2}%
-\contentsline {subsection}{\numberline {0.1.3}Che cos'è il prodotto cartesiano?}{2}{subsection.0.1.3}%
-\contentsline {subsection}{\numberline {0.1.4}Quanti sottoinsiemi ha un insieme con n elementi?}{2}{subsection.0.1.4}%
-\contentsline {subsection}{\numberline {0.1.5}Che cos'è una lista?}{3}{subsection.0.1.5}%
-\contentsline {subsection}{\numberline {0.1.6}Parla dei prodotti condizionati}{3}{subsection.0.1.6}%
-\contentsline {subsection}{\numberline {0.1.7}Che cosa sono le disposizioni?}{3}{subsection.0.1.7}%
-\contentsline {subsection}{\numberline {0.1.8}Definisci le combinazioni, illustra inoltre la correlazione che c'è fra esse e le disposizioni, di conseguenza mostra come contare il numero di combinazioni}{4}{subsection.0.1.8}%
-\contentsline {subsection}{\numberline {0.1.9}Come possiamo contare con precisione il numero di anagrammi di una parola?}{4}{subsection.0.1.9}%
+\contentsline {section}{\numberline {0.1}Combinatoria}{4}{section.0.1}%
+\contentsline {subsection}{\numberline {0.1.1}Cos'è la cardinalità di un insieme? Cos'è una corrispondenza biunivoca tra insiemi? Cosa significa insieme numerabile?}{4}{subsection.0.1.1}%
+\contentsline {subsection}{\numberline {0.1.2}Esempio di insieme numerabile e non numerabile}{4}{subsection.0.1.2}%
+\contentsline {subsection}{\numberline {0.1.3}Che cos'è il prodotto cartesiano?}{4}{subsection.0.1.3}%
+\contentsline {subsection}{\numberline {0.1.4}Quanti sottoinsiemi ha un insieme con n elementi?}{4}{subsection.0.1.4}%
+\contentsline {subsection}{\numberline {0.1.5}Che cos'è una lista?}{5}{subsection.0.1.5}%
+\contentsline {subsection}{\numberline {0.1.6}Parla dei prodotti condizionati}{5}{subsection.0.1.6}%
+\contentsline {subsection}{\numberline {0.1.7}Che cosa sono le disposizioni?}{5}{subsection.0.1.7}%
+\contentsline {subsection}{\numberline {0.1.8}Definisci le combinazioni, illustra inoltre la correlazione che c'è fra esse e le disposizioni, di conseguenza mostra come contare il numero di combinazioni}{6}{subsection.0.1.8}%
+\contentsline {subsection}{\numberline {0.1.9}Come possiamo contare con precisione il numero di anagrammi di una parola?}{6}{subsection.0.1.9}%
+\contentsline {subsection}{\numberline {0.1.10}Definisci la funzione ricorsiva di Stifel}{6}{subsection.0.1.10}%
+\contentsline {subsection}{\numberline {0.1.11}Parlami dei numeri di Fibonacci}{7}{subsection.0.1.11}%
+\contentsline {subsection}{\numberline {0.1.12}Raccontami il principio di inclusione-esclusione}{7}{subsection.0.1.12}%
+\contentsline {subsection}{\numberline {0.1.13}Come faccio a contare il numero di funzioni iniettive?}{8}{subsection.0.1.13}%
+\contentsline {subsection}{\numberline {0.1.14}Come faccio a contare il numero di funzioni suriettive?}{8}{subsection.0.1.14}%
+\contentsline {subsection}{\numberline {0.1.15}Che cosa sono gli scombussolamenti?}{9}{subsection.0.1.15}%
+\contentsline {subsection}{\numberline {0.1.16}Che cosa sono le partizioni?}{9}{subsection.0.1.16}%
+\contentsline {subsection}{\numberline {0.1.17}Come si contano le partizioni?}{9}{subsection.0.1.17}%
+\contentsline {subsection}{\numberline {0.1.18}Che cosa sono e come si ottengono i numeri di Stirling?}{10}{subsection.0.1.18}%
+\contentsline {subsection}{\numberline {0.1.19}Che cosa sono e come si ottengono i cammini reticolari?}{10}{subsection.0.1.19}%
+\contentsline {section}{\numberline {0.2}Statistica descrittiva}{10}{section.0.2}%
+\contentsline {section}{\numberline {0.3}Probabilità}{11}{section.0.3}%
+\contentsline {subsection}{\numberline {0.3.1}Introduci la probabilità}{11}{subsection.0.3.1}%
+\contentsline {subsection}{\numberline {0.3.2}Cos'è uno spazio di probabilità?}{11}{subsection.0.3.2}%
+\contentsline {subsection}{\numberline {0.3.3}A cosa mi riferisco quando parlo di casi possibili su casi totali?}{12}{subsection.0.3.3}%
+\contentsline {subsection}{\numberline {0.3.4}Parlami della probabilità condizionale}{12}{subsection.0.3.4}%
+\contentsline {subsection}{\numberline {0.3.5}Qual'è la formula delle probabilità totali? Come funziona? A cosa serve?}{12}{subsection.0.3.5}%
+\contentsline {subsection}{\numberline {0.3.6}Cos'è una variabile aleatoria?}{12}{subsection.0.3.6}%
+\contentsline {subsection}{\numberline {0.3.7}Parlami della densità}{12}{subsection.0.3.7}%
+\contentsline {subsection}{\numberline {0.3.8}Parlami della densità uniforme}{13}{subsection.0.3.8}%
+\contentsline {subsection}{\numberline {0.3.9}Parla della densità di Bernoulli e della funzione caratteristica}{13}{subsection.0.3.9}%
+\contentsline {subsection}{\numberline {0.3.10}Schema successo-insuccesso}{14}{subsection.0.3.10}%
+\contentsline {subsection}{\numberline {0.3.11}Raccontami la densità binomiale}{14}{subsection.0.3.11}%
+\contentsline {subsection}{\numberline {0.3.12}Che cos'è la variabile ipergeometrica?}{14}{subsection.0.3.12}%
+\contentsline {subsection}{\numberline {0.3.13}Raccontami la variabile geometrica e la geometrica modificata}{14}{subsection.0.3.13}%
+\contentsline {subsection}{\numberline {0.3.14}Definisci la proprietà di mancanza di memoria, chi ne gode?}{15}{subsection.0.3.14}%
+\contentsline {subsection}{\numberline {0.3.15}Parlami della densità di Poisson}{15}{subsection.0.3.15}%
+\contentsline {subsection}{\numberline {0.3.16}Parla delle variabili multidimensionali}{15}{subsection.0.3.16}%
+\contentsline {subsection}{\numberline {0.3.17}Invece per quanto riguarda la densità delle variabili multidimensionali?}{16}{subsection.0.3.17}%
+\contentsline {subsection}{\numberline {0.3.18}Come si trova la densità marginale a partire dalla congiunta?}{16}{subsection.0.3.18}%
+\contentsline {subsection}{\numberline {0.3.19}Definisci la funzione di ripartizione}{16}{subsection.0.3.19}%
+\contentsline {subsection}{\numberline {0.3.20}Quale è e come si ottiene la funzione di ripartizione del massimo? del minimo invece?}{16}{subsection.0.3.20}%
+\contentsline {subsection}{\numberline {0.3.21}Se abbiamo due densità marginali uguali, possiamo dedurre la congiunta? Quando non possiamo? Mi fai un esempio?}{17}{subsection.0.3.21}%
+\contentsline {subsection}{\numberline {0.3.22}Considerando una variabile aleatoria X, se gli viene applicata una funzione che la trasforma, come varia la sua densità?}{17}{subsection.0.3.22}%
+\contentsline {subsection}{\numberline {0.3.23}Parlami del valore atteso}{17}{subsection.0.3.23}%
+\contentsline {subsection}{\numberline {0.3.24}Quali sono le proprietà e le principali caratteristiche del valore atteso?}{18}{subsection.0.3.24}%
+\contentsline {subsection}{\numberline {0.3.25}Definisci la varianza}{19}{subsection.0.3.25}%
+\contentsline {subsection}{\numberline {0.3.26}Definisci la covarianza}{20}{subsection.0.3.26}%
+\contentsline {subsection}{\numberline {0.3.27}Definisci la proprietà più importante della varianza}{20}{subsection.0.3.27}%
+\contentsline {subsection}{\numberline {0.3.28}Spiega la legge dei grandi numeri}{20}{subsection.0.3.28}%
+\contentsline {subsection}{\numberline {0.3.29}Quale è il valore atteso e la varianza di una variabile di Bernoulli?}{22}{subsection.0.3.29}%
+\contentsline {subsection}{\numberline {0.3.30}Definisci la variabile continua}{23}{subsection.0.3.30}%
+\contentsline {subsection}{\numberline {0.3.31}Quale è la densità continua?}{23}{subsection.0.3.31}%
+\contentsline {subsection}{\numberline {0.3.32}Che legame c'è fra una funzione di ripartizione continua e la densità}{23}{subsection.0.3.32}%
+\contentsline {subsection}{\numberline {0.3.33}Come si trova il valore atteso nell'ambito delle variabili continue?}{23}{subsection.0.3.33}%
+\contentsline {subsection}{\numberline {0.3.34}Come si determina la varianza nell'ambito delle variabili continue?}{24}{subsection.0.3.34}%
+\contentsline {subsection}{\numberline {0.3.35}Definisci la densità continua uniforme}{24}{subsection.0.3.35}%
+\contentsline {subsection}{\numberline {0.3.36}Definisci la densità continua astratta e la funzione di ripartizione astratta}{24}{subsection.0.3.36}%
+\contentsline {subsection}{\numberline {0.3.37}Parlami della densità esponenziale}{25}{subsection.0.3.37}%
+\contentsline {subsection}{\numberline {0.3.38}Raccontami la densità normale}{25}{subsection.0.3.38}%

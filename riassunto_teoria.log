@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.11.6)  19 NOV 2021 17:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.10.14)  28 DEC 2021 08:57
 entering extended mode
 **./riassunto_teoria.tex
 (riassunto_teoria.tex
@@ -61,7 +61,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 Package: alltt 2021/01/29 v2.0g defines alltt environment
 )
 (C:\Users\alexp\AppData\Local\Programs\MiKTeX\tex/latex/fancyvrb\fancyvrb.sty
-Package: fancyvrb 2021/10/15 v3.9 verbatim text (tvz,hv)
+Package: fancyvrb 2021/08/12 v3.8 verbatim text (tvz,hv)
 
 (C:\Users\alexp\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
@@ -379,20 +379,18 @@ Package cleveref Info: `amsthm' support loaded on input line 3026.
 
 Excluding comment 'comment')
 (C:\Users\alexp\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.sty
-Package: microtype 2021/10/31 v3.0 Micro-typographical refinements (RS)
+Package: microtype 2021/03/14 v2.8c Micro-typographical refinements (RS)
 \MT@toks=\toks32
 \MT@count=\count289
-\MT@tempbox=\box55
-\MT@leftmarginkern=\dimen155
-\MT@rightmarginkern=\dimen156
-LaTeX Info: Redefining \textls on input line 1114.
-\MT@outer@kern=\dimen157
-LaTeX Info: Redefining \textmicrotypecontext on input line 1700.
+LaTeX Info: Redefining \textls on input line 790.
+\MT@outer@kern=\dimen155
+LaTeX Info: Redefining \textmicrotypecontext on input line 1374.
 \MT@listname@count=\count290
 
 (C:\Users\alexp\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype-pdf
 tex.def
-File: microtype-pdftex.def 2021/10/31 v3.0 Definitions specific to pdftex (RS)
+File: microtype-pdftex.def 2021/03/14 v2.8c Definitions specific to pdftex (RS)
+
 LaTeX Info: Redefining \lsstyle on input line 915.
 LaTeX Info: Redefining \lslig on input line 915.
 \MT@outer@space=\skip56
@@ -400,7 +398,7 @@ LaTeX Info: Redefining \lslig on input line 915.
 Package microtype Info: Loading configuration file microtype.cfg.
 
 (C:\Users\alexp\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.cfg
-File: microtype.cfg 2021/10/31 v3.0 microtype main configuration file (RS)
+File: microtype.cfg 2021/03/14 v2.8c microtype main configuration file (RS)
 ))
 (C:\Users\alexp\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
 Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and foote
@@ -429,11 +427,11 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 (C:\Users\alexp\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.sty
 Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 37.
+Package hyperref Info: Option `colorlinks' set `true' on input line 38.
 
 
 Package hyperref Warning: Option `bookmarks' has already been used,
-(hyperref)                setting the option has no effect on input line 37.
+(hyperref)                setting the option has no effect on input line 38.
 
 \@indexfile=\write5
 \openout5 = `riassunto_teoria.idx'.
@@ -444,40 +442,40 @@ Writing index file riassunto_teoria.idx
 tex.def
 File: l3backend-pdftex.def 2021-08-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count291
-\l__pdf_internal_box=\box56
+\l__pdf_internal_box=\box55
 ) (riassunto_teoria.aux)
 \openout1 = `riassunto_teoria.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
 
 (C:\Users\alexp\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count292
-\scratchdimen=\dimen158
-\scratchbox=\box57
+\scratchdimen=\dimen156
+\scratchbox=\box56
 \nofMPsegments=\count293
 \nofMParguments=\count294
 \everyMPshowfont=\toks33
 \MPscratchCnt=\count295
-\MPscratchDim=\dimen159
+\MPscratchDim=\dimen157
 \MPnumerator=\count296
 \makeMPintoPDFobject=\count297
 \everyMPtoPDFconversion=\toks34
@@ -498,7 +496,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 149.
 )
-Package hyperref Info: Link coloring ON on input line 46.
+Package hyperref Info: Link coloring ON on input line 47.
  (C:\Users\alexp\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -511,27 +509,23 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count298
 )
-LaTeX Info: Redefining \ref on input line 46.
-LaTeX Info: Redefining \pageref on input line 46.
-LaTeX Info: Redefining \nameref on input line 46.
+LaTeX Info: Redefining \ref on input line 47.
+LaTeX Info: Redefining \pageref on input line 47.
+LaTeX Info: Redefining \nameref on input line 47.
  (riassunto_teoria.out) (riassunto_teoria.out)
 \@outlinefile=\write6
 \openout6 = `riassunto_teoria.out'.
 
-LaTeX Info: Redefining \it@ocap on input line 46.
-LaTeX Info: Redefining \it@ccap on input line 46.
-LaTeX Info: Redefining \microtypecontext on input line 46.
-Package microtype Info: Applying patch `item' on input line 46.
-Package microtype Info: Applying patch `toc' on input line 46.
-Package microtype Info: Applying patch `eqnum' on input line 46.
-Package microtype Info: Applying patch `footnote' on input line 46.
+LaTeX Info: Redefining \it@ocap on input line 47.
+LaTeX Info: Redefining \it@ccap on input line 47.
+LaTeX Info: Redefining \microtypecontext on input line 47.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 46.
+LaTeX Info: Redefining \showhyphens on input line 47.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -540,9 +534,6 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-Overfull \vbox (2.51065pt too high) detected at line 51
- []
-
 [1
 
 {C:/Users/alexp/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
@@ -594,55 +585,425 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 (C:\Users\alexp\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-))
+)pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.29 ...iona? A cosa serve?}{12}{subsection.0.3.5}
+                                                  % [1
+
+] [2])
 \tf@toc=\write7
 \openout7 = `riassunto_teoria.toc'.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.68 	\newpage
-               [1
-
-]
+ [3]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 7
-8.
+9.
 
 (C:\Users\alexp\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [2]
-[3] [4] (riassunto_teoria.aux
+) [4]
+[5] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 148--153
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 148--153
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 148--153
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 148--153
+
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 157--164
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--164
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--164
+
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 166--174
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 166--174
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 166--174
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 166--174
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--179
+
+ []
+
+
+Overfull \hbox (7.58937pt too wide) in paragraph at lines 182--183
+[]\T1/lmr/m/n/12 (-20) In con-clu-sio-ne ot-te-nia-mo un pro-dot-to con-di-zio-
+na-to del ti-po : $\OT1/lmr/m/n/12 (-20) ([]\OML/lmm/m/it/12 ; B[]\OT1/lmr/m/n/
+12 (-20) )$ 
+ []
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 186--189
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 186--189
+
+ []
+
+[10] [11] [12] [13]
+Underfull \hbox (badness 10000) in paragraph at lines 282--290
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 291--299
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 291--299
+
+ []
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 310--321
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 310--321
+
+ []
+
+[15] [16]
+Underfull \hbox (badness 10000) in paragraph at lines 347--353
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 354--357
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 354--357
+
+ []
+
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 359--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 359--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 359--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 359--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 359--367
+
+ []
+
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 372--390
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 372--390
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 372--390
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 372--390
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 372--390
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 372--390
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 372--390
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 372--390
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 372--390
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 372--390
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 372--390
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 372--390
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 372--390
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 392--397
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 392--397
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 399--402
+
+ []
+
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 404--410
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 404--410
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 404--410
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 404--410
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 404--410
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 412--437
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 412--437
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 412--437
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 412--437
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 412--437
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 412--437
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 412--437
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 412--437
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 412--437
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 412--437
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 412--437
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 412--437
+
+ []
+
+[20] [21]
+Underfull \hbox (badness 10000) in paragraph at lines 438--448
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 438--448
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 438--448
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 438--448
+
+ []
+
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 454--460
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 454--460
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 470--473
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 470--473
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 474--476
+
+ []
+
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 481--483
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 503--508
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 503--508
+
+ []
+
+[24] [25] (riassunto_teoria.aux
 Package cleveref Info: loaded `italian' language definitions on input line 21.
 Package cleveref Info: loaded `italian' language definitions on input line 22.
 )
 Package rerunfilecheck Info: File `riassunto_teoria.out' has not changed.
-(rerunfilecheck)             Checksum: E8CD2085A33787BFBC06AE16AF44DE92;3752.
+(rerunfilecheck)             Checksum: B8248C9BDA18B78A2572B02DD88A9395;19552.
  ) 
 Here is how much of TeX's memory you used:
- 14797 strings out of 478927
- 240953 string characters out of 2852535
- 603889 words of memory out of 3000000
- 32329 multiletter control sequences out of 15000+600000
- 441092 words of font info for 93 fonts, out of 8000000 for 9000
+ 14894 strings out of 478927
+ 241795 string characters out of 2852534
+ 605524 words of memory out of 3000000
+ 32273 multiletter control sequences out of 15000+600000
+ 447883 words of font info for 135 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,5n,66p,1015b,556s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,14n,66p,970b,768s stack positions out of 5000i,500n,10000p,200000b,80000s
 {C:/Users/alexp/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C
-:/Users/alexp/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C
 :/Users/alexp/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C
+:/Users/alexp/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C
+:/Users/alexp/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C
 :/Users/alexp/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/U
 sers/alexp/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}<C:/Users
 /alexp/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users
+/alexp/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users
 /alexp/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users
 /alexp/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/
 alexp/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/a
-lexp/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/ale
-xp/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/ale
-xp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb
->
-Output written on riassunto_teoria.pdf (5 pages, 138716 bytes).
+lexp/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/ale
+xp/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/alexp
+/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/alexp
+/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/alexp/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on riassunto_teoria.pdf (26 pages, 286199 bytes).
 PDF statistics:
- 132 PDF objects out of 1000 (max. 8388607)
- 16 named destinations out of 1000 (max. 500000)
- 22609 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 520 PDF objects out of 1000 (max. 8388607)
+ 87 named destinations out of 1000 (max. 500000)
+ 25057 words of extra memory for PDF output out of 29859 (max. 10000000)
 
