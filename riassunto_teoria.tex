@@ -10,6 +10,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{hyperref}
 \usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
 
 % Questo commentalo se vuoi scrivere in inglese.
 \usepackage[italian]{babel}
@@ -40,7 +41,7 @@
 
 \makeindex
 
-\title{\textbf{FORMULARIO MDP}}
+\title{\textbf{SUNTI MDP}}
 \author{Alessandro Pioggia}
 
 \begin{document}
@@ -67,7 +68,7 @@
 		
 	\newpage
 	
-	\section{Combinatoria - Lezione 1}
+	\section{Combinatoria}
 	\subsection{Cos'è la cardinalità di un insieme? Cos'è una corrispondenza biunivoca tra insiemi? Cosa significa insieme numerabile?}
 	Supponendo di avere un insieme A con n elementi, n è la cardinalità. 
 	Supponendo di avere due insiemi A e B, definiamo una funzione $f(A) : B$, se  è sia suriettiva che iniettiva i due insiemi sono in corrispondenza biunivoca(ovvero è possibile associare a ciascun elemento di un insieme uno ed uno solo elemento dell'altro).
@@ -160,7 +161,351 @@
 	 = 
 	 = $\sum_{i \in I}(-1)^{(|I|)} \cdot (n - |I|)^m$ \\ \\
 	 = $\sum_{k = 0}^{n}(-1)^k \cdot \binom{n}{k} \cdot (n - k)^m$
-	 
-	 
+	 \newpage
+	 \subsection{Che cosa sono gli scombussolamenti?}
+	 Gli scombussolamenti rappresentano tutte le possibili permutazioni in cui nessun elemento rimane al proprio posto.
+	 Per contarli è sufficiente sfruttare la logica che è stata usata per contare il numero di funzioni suriettive, ovvero : \\
+	 Supponendo di avere un insieme A = $(A_1 \cup A_2 \cup ... \cup A_n)$,\\ in cui $A_i = (n - 1)!$ = $\{$tutte le permutazioni in cui i rimane al proprio posto $\}$; ne vogliamo calcolare il complementare(in modo da trovare solo quelli che non cambiano mai di posto!).\\
+	 Dunque torniamo al calcolo di : \\\\
+	 $|(A_1 \cup A_2 \cup ... \cup A_n)^c| = \sum_{I \in {0, ..., n}}(-1)^{|I|} \cdot |\prod_{i \in I}A_i$| \\\\
+	 = $\sum_{k = 0}^{n}(-1)^k \cdot \binom{n}{k} \cdot (n - k)!$ \\\\
+	 = $\sum_{k = 0}^{n}(-1)^k \cdot \dfrac{n!}{k!(n-k)!} \cdot (n - k)!$ \\\\
+	 = $\sum_{k = 0}^{n}(-1)^k \cdot n_{n-k}$
+	 \subsection{Che cosa sono le partizioni?}
+	 Le partizioni rappresentano la suddivisione di un insieme in blocchi disgiunti, rigorosamente non vuoti.
+	 \subsection{Come si contano le partizioni?}
+	 Per contare le partizioni si utilizzano i numeri di Bell, per fare ciò abbiamo a nostra disposizione una formula ricorsiva : $\sum_{k = 1}^{n}\binom{n - 1}{k - 1} \cdot B_{n - k}$ \\\\
+	 Dimostrazione della formula : 
+	 \begin{itemize}
+	 	\item Considerando un insieme di cardinalità k in cui è contenuto anche n, noi vogliamo contare tutti i possibili sottoinsiemi formati dai restanti k-1 elementi, sono $\binom{n-1}{k-1}$.
+	 	\item Per ogni sottoinsieme ottenuto al punto precedente, noi vogliamo calcolarne tutte le possibili partizioni, che otterremo con il passo ricorsivo : $B_{n - k}$
+	 	\item In conclusione otteniamo un prodotto condizionato del tipo : $(\binom{n-1}{k-1}, B_{n - k})$
+	 \end{itemize}
+	\newpage
+	\subsection{Che cosa sono e come si ottengono i numeri di Stirling?}
+	I numeri di stirling servono per contare il numero di partizioni di una precisa cardinalità k su un insieme di n elementi. Per contare è sufficiente usare la formula ricorsiva così definita : \\\\
+	$S_{n, k} = k \cdot S_{n - 1, k} \cdot S_{n - 1, k - 1}$ \\\\
+	Dimostrazione della formula : 
+	\begin{itemize}
+		\item n in compagnia : prendo in considerazione tutte le partizioni che contengono n, quindi avrò $S_{n - 1, k}$, a cui aggiungerò ad ogni blocco n, quindi moltiplico il tutto per k
+		\item n da solo : Devo partizionare tutti i numeri da 1 a k-1(escluso n che è da solo) in k - 1 blocchi $\rightarrow$ $S_{n - 1, k - 1}$
+	\end{itemize}
+	\subsection{Che cosa sono e come si ottengono i cammini reticolari?}
+	\section{Statistica descrittiva}
+	\newpage
+	\section{Probabilità}
+	\subsection{Introduci la probabilità}
+	La probabilità studia i fenomeni aleatori che, a differenza di quelli deterministici, non permettono di prevedere con esattezza il risultato, è necessario dunque effettuare delle stime. \\
+	$\Omega = $ "insieme di tutti i possibili risultati di un fenomeno aleatorio" \\
+	Evento : sottoinsieme di omega, dunque è l'insieme dei possibili risultati di un fenomeno aleatorio. \\
+	Famiglia coerente di eventi($E_1, E_2, ..., E_n$) : collezione di sottoinsiemi di $\Omega$ che rispettano le seguenti condizioni(lo indichiamo con $A$)
+	\begin{itemize}
+		\item 0, $\Omega$ $\in$ $A$
+		\item Se $E$ $\in$ $A$ anche $E^c$ $\in$ $A$
+		\item Se $E_1, E_2, ..., E_n$ sono eventi, allora sia la loro intersezione che unione è un evento
+	\end{itemize}
+	Valutazione di probabilità : Funzione che associa ad ogni evento un numero, scelto in base alle probabilità che esso accada. \\
+	Volendola definire formalmente : \\
+	Data una famiglia coerente di eventi $A$, una valutazione di probabilità su $A$ è una funzione $P : A \rightarrow \mathbb{R}$ che soddisfa le seguenti proprietà : 
+	\begin{itemize}
+		\item $P(\Omega) = 1$
+		\item $P(A) \geq 0$
+		\item $P(A_1 \cup A_2, ..., \cup A_n) = P(A_1) + P(A_2) + ... + P(A_n)$
+	\end{itemize}
+	L'ultima proprietà ci dice che gli eventi devono essere disgiunti.
+	\subsection{Cos'è uno spazio di probabilità?}
+	Uno spazio di probabilità è una terna di tipo $(\Omega, A, P)$ in cui $\Omega$ è un insieme, $A$ è una famiglia coerente di eventi e $P$ è una probabilità su $A$. Parliamo invece di spazio di probabilità uniforme quando, $\Omega$ è un insieme finito, $A$ è un insieme di possibili sottoinsiemi di $\Omega$ e tutti i risultati sono equiprobabili. In formule : \\
+	$\Omega$ = $\{a_1, a_2, a_3, ..., a_n\}$; $A$ = $\{$Possibili sottoinsiemi di $\Omega$ $\}$; inoltre richiediamo che $P(a_1) = P(a_2) = P(a_3) = ... = P(a_n) = p$
+	\subsection{A cosa mi riferisco quando parlo di casi possibili su casi totali?}
+	Considerando uno spazio di probabilità uniforme $(\Omega, A, P)$ ed $A$ $\in$ $\Omega$ è un evento, allora : 
+	$P(A) = \dfrac{|A|}{|\Omega|}$ e si tratta di casi possibili su casi totali.\\
+	Dimostrazione : \\
+	Prendiamo un qualunque sottoinsieme di $\Omega$ con cardinalità k, \\ $P(A) = \dfrac{1}{n} + ... + \dfrac{1}{n} = \dfrac{k}{n} = \dfrac{|A|}{|\Omega|}$
+	\subsection{Parlami della probabilità condizionale}
+	Considerando due eventi distinti A e B, il calcolo della probabilità condizionale consta nel definire la probabilità che accada l'evento B sapendo che è già avvenuto A (o viceversa). Questa probabilità la definiamo come $P(B|A)$ e si calcola nella seguente maniera: $P(B|A) = \dfrac{P(A \cap B)}{P(A)}$, questo perchè non è altro che la proporzione di $A \cap B$ in $A$.
+	\subsection{Qual'è la formula delle probabilità totali? Come funziona? A cosa serve?}
+	La formula delle probabilità totali ci consente di calcolare la probabilità di un evento, conoscendo le probabilità condizionali, suddividendolo in casi.
+	Formalmente, supponendo di avere 3 eventi A, B e C, con C che è intersecato sia ad A che a B:
+	$P(C) = P(C \cap A) + P(C \cap B) = P(C) \cdot P(A|C) + P(C) \cdot P(B|C)$
+	\subsection{Cos'è una variabile aleatoria?}
+	Data una funzione $X:\Omega \rightarrow \mathbb{R}$, $X$ è una variabile aleatoria se: \\ $\{\omega \in \Omega | X(\omega) \leq a\}$ \\ per ogni $a \in \mathbb{R}$ è un evento.
+	\subsection{Parlami della densità}
+	Partiamo differenziando due tipi di densità, quella discreta e quella astratta.\\
+	Densità discreta: \\
+	Data  una variabile aleatoria discreta X, prende il nome di densità discreta la funzione $p_x : \mathbb{R} \rightarrow \mathbb{R}$ tale che $p_x(h) = P(x = h)$ con $h$ numero intero. Per essere definita tale deve soddisfare 3 proprietà:
+	\begin{itemize}
+		\item $p_x(h) \geq 0$
+		\item $p_x(h) \neq 0$
+		\item $\sum_{\forall h \in \mathbb{R}} p_x(h) = 1$
+	\end{itemize}
+	Densità astratta: \\
+	Prende il nome di densità astratta la funzione $p : \mathbb{R} \rightarrow \mathbb{R}$ che soddisfa le 3 proprietà:
+	\begin{itemize}
+		\item $p(h) \geq 0$
+		\item $p(h) \neq 0$
+		\item $\sum_{\forall h \in \mathbb{R}} p_x(h) = 1$
+	\end{itemize}
+	\subsection{Parlami della densità uniforme}
+	Supponendo di avere un evento $A = \{x_1, x_2, ..., x_n\}$, abbiamo che $X$ è una variabile uniforme, se tutte le $x_i$ hanno la seguente densità, detta uniforme $\rightarrow$ $
+	\begin{cases}
+		\dfrac{1}{n}\qquad  k = x_1, x_2, x_3, ... , x_n \\  
+		0\qquad			 altrimenti \\
+	\end{cases}
+	$
 	
-\end{document}
+	\subsection{Parla della densità di Bernoulli e della funzione caratteristica}
+	Una variabile di bernoulli può assumere solo due valori: $\{1, 0\}$ e la sua densità è la seguente: $d_x(k)$=
+	$
+	\begin{cases}
+		P(A)\qquad\quad  	k = 1 \\  
+		1 - P(A)\quad	k = 0 \\
+		0\qquad\qquad\quad		altrimenti
+	\end{cases} \\
+	$ 
+	Se $A$ è un evento la sua funzione caratteristica $X_A$ data da :\\$X_A(\omega)$ =
+	$
+	\begin{cases}
+		1\qquad\quad  	\omega \in A \\  
+		0\qquad\quad	\omega \notin A \\
+	\end{cases} \\
+	$ 
+	è una variabile aleatoria, perchè soddisfa la definizione, ovvero che $X_A \leq a$ è un evento per ogni $a \in \mathbb{R}$.
+	Deduciamo quindi che la seguente relazione è rappresentabile attraverso una variabile di Bernoulli, che assume 1 con probabilità $p$ e 0 con probabilità $(p - 1)$.
+	\subsection{Schema successo-insuccesso}
+	Uno schema successo-insuccesso è una sequenza di un numero infinito di fenomeni aleatori,
+	ognuno dei quali può dare successo o insuccesso. Si può studiare il numero di successi
+	(variabile binomiale, ogni successo avviene con probabilità p ed ogni fenomeno aleatorio è
+	indipendente dall'altro) o il numero di insuccessi prima di ottenere un successo (variabile
+	geometrica).
+	\subsection{Raccontami la densità binomiale}
+	Le variabili binomiali, aventi densità binomiale, rappresentano uno schema successo-insuccesso a prove indipendenti (significa che la probabilità di avere successo è la stessa per ogni tentativo, indipendentemente da ciò che è successo prima).
+	La variabile binomiale, nel caso generale, determina la probabilità che io ottenga k successi su n tentativi. Supponendo di avere una variabile aleatoria \\ $X$ = "numero di successi su n tentativi", la probabilità che \\$P(X = k) = $ 
+	$
+	\begin{cases}
+		\binom{n}{k} \cdot p^k \cdot (1-p)^{n-k}\qquad\quad k = 1, .. \\  
+		0\qquad\quad	altrimenti \\
+	\end{cases} \\
+	$
+	\subsection{Che cos'è la variabile ipergeometrica?}
+	La variabile ipergeometrica, rappresenta un particolare schema successo-insuccesso a prove dipendenti (Ovvero la probabilità che ottenga successo in un tentativo è influenzato dai risultati precedenti). Per definire la densità di questa variabile è sufficiente prendere in considerazione una pescata di n palline da una urna, con palline rosse e nere, senza rimpiazzo, con successo="estrazione di una rossa", dunque avrò una variabile $X$ = "numero di successi su n tentativi".
+	La densità risulterà così: \\ \\ $P(X = k)$
+	$
+	\begin{cases}
+		\dfrac{\binom{r}{k} \binom{nere}{n - k}}{\binom{r + nere}{n}}\qquad\quad k = 1, .. \\  
+		0\qquad\quad	altrimenti \\
+	\end{cases} \\
+	$
+	\subsection{Raccontami la variabile geometrica e la geometrica modificata}
+	La variabile geometrica modificata ci permette di contare il numero di tentativi necessari prima di ottenere un successo.
+	La sua densità è: $(1-p)^{k - 1} \cdot p$ \\
+	La variabile geometrica invece, ha come obiettivo quello di contare il numero di insuccessi che si ottengono prima di raggiungere il successo. Si nota che non è altro che la geometrica modificata shiftata di uno, dunque la sua densità sarà: $(1 - p)^k \cdot p$
+	\subsection{Definisci la proprietà di mancanza di memoria, chi ne gode?}
+	La proprietà di mancanza di memoria afferma che la probabilità che un evento accada non è influenzata da tutto ciò che è avvenuto prima. Formalmente:
+	$P(X \geq k + m | X \geq m) = P(X \ge k)$ \\
+	Dimostrazione(con variabile geometrica):\\
+	$P(X \geq k + m | X \geq m) = \dfrac{P(X \geq k + m \cap X \geq m)}{P(X \geq m)} = \dfrac{P(X \geq k + m)}{P(x \geq m)}$\\
+	= $\dfrac{(1-p)^{k + m} \cdot p }{(1-p)^m \cdot p} = (1-p)^k = P(X \geq k)$
+	\subsection{Parlami della densità di Poisson}
+	Quando abbiamo una variabile binomiale con n molto grande ($n \ge 50$) e una probabilità molto piccola ($p \leq 0.02$), abbiamo la necessità di sfruttare la densità citata, in quanto con la binomiale verrebbe un calcolo troppo complicato. La densità di Poisson è la seguente:\\ \\
+	$
+	\begin{cases}
+		e^{-\lambda} \cdot \dfrac{\lambda^k}{k!} \qquad\quad k = 1, 2, ... \\  
+		0\qquad\quad	altrimenti \\
+	\end{cases} \\\\
+	$
+	Occorre dimostrare che essa sia una densità, ovvero occorre che
+	$\sum_{k = 0}d(k) = 1$ \\ \\
+	$\sum_{k = 0}^{\infty} e^{-\lambda} \cdot \dfrac{\lambda^k}{k!} = e^\lambda \cdot \sum_{k = 0}^{\infty} \dfrac{\lambda^k}{k!} = e^{-\lambda} \cdot e^{\lambda} = 1$ \\
+	Ciò è stato possibile sfruttando il fatto che: $e^{\lambda} = \sum_{k = 0}^{\infty} \dfrac{\lambda^k}{k!}$ grazie ad una proprietà dello sviluppo di Taylor.
+	\subsection{Parla delle variabili multidimensionali}
+	Una variabile multidimensionale è una cosa del tipo $X = (x_1, x_2, ..., x_m)$ dove $x_1, ..., x_m$ sono m variabili aleatorie. L'unica condizione è che queste  variabili siano definite sullo stesso spazio  ($\Omega$).
+	\subsection{Invece per quanto riguarda la densità delle variabili multidimensionali?}
+	La densità multidimensionale è una funzione $d_x:\mathbb{R}^m \rightarrow \mathbb{R}$. Ad esempio con 3 variabili risulta: $d_x(k, h, l) = P(x1 = k, x2= h, x3 = l)$, vogliamo che simultaneamente queste tre variabili assumano questi tre valori (k, h, l).
+	\subsection{Come si trova la densità marginale a partire dalla congiunta?}
+	Prendendo come punto di riferimento il caso più comune, ovvero il caso bidimensionale, occorre sommare le varie densità congiunte in cui la coordinata corrispondente alla marginale che vogliamo trovare rimane fissa mentre le altre variano. Formalmente: \\
+	$d_x(k) = \sum_{h \in R}d_{x, y}(k, h_1, h_2, ..., h_n)$ \\
+	$d_y(h) = \sum_{k \in R}d_{x, y}(k_1, k_2, ..., k_n, h)$
+	\subsection{Definisci la funzione di ripartizione}
+	La funzione di ripartizione di una variabile aleatoria x è una funzione \\$F_x : \mathbb{R} \rightarrow \mathbb{R}$ in cui $F_x(t) = P(x \leq t)$. 
+	\subsection{Quale è e come si ottiene la funzione di ripartizione del massimo? del minimo invece?}
+	Considerando due variabili aleatorie indipendenti $x$ e $y$ e $z=max(x, y)$ abbiamo che la funzione di ripartizione di z è la seguente: \\
+	$F_z(t) = F_x(t) \cdot F_y(t)$ \\
+	Dimostrazione:\\
+	$F_z(t) = P(z \leq t) = P(max(x, y) \leq t) = P(x \leq t, y \leq t) \\= P(x \leq t) \cdot P(y \leq t) = F_x(t) \cdot F_y(t)$ \\
+	Invece la funzione di ripartizione del minimo, con w=min(x,y): \\
+	$(1 - F_w(t)) = (1 - F_x(t)) \cdot (1 - F_y(t))$ \\
+	Dimostrazione:\\
+	$(1 - F_w(t)) = P(w \ge t) = P(min(x, y) \ge t)$ \\
+	$= P(x \ge t, y \ge t) = P(x \ge t) \cdot P(y \ge t)$ \\
+	$(1 - F_w(t)) = (1 - F_x(t)) \cdot (1 - F_y(t))$
+	\subsection{Se abbiamo due densità marginali uguali, possiamo dedurre la congiunta? Quando non possiamo? Mi fai un esempio?}
+	Posso ricavare una densità congiunta a  partire dalle marginali solo in caso di indipendenza perchè vale la relazione: \\
+	$P(x_1=k, ..., x_n = k) = P(x_1 = k) \cdot ... \cdot P(x_n = k)$ \\
+	Un esempio può essere il lancio di tre dadi, dove consideriamo $x_i$ il risultato ottenuto. Ponendo $Y = x_1 + x_2 + x_3$, abbiamo che moltiplicando le densità marginali otteniamo la densità di Y, quindi la congiunta, questo perchè i lanci di dadi sono indipendenti.
+	\subsection{Considerando una variabile aleatoria X, se gli viene applicata una funzione che la trasforma, come varia la sua densità?}
+	\textbf{Caso monodimensionale} \\
+	Consideriamo una funzione $\phi : \mathbb{R} \rightarrow \mathbb{R}$, t.c. $\phi(x) = x^2 = z$, abbiamo che:\\
+	$d_z(h) = \sum_{h :\phi(h) = z}d_x(h)$  \\\\
+	\textbf{Caso bidimensionale} \\
+	Considerando una funzione $\phi : \mathbb{R}^2 \rightarrow \mathbb{R}$,  e una variabile aleatoria $X$ di densità $d_x(h)$, supponendo che $\phi(h, k) = h + k = z$, abbiamo che: \\
+	$d_{z}(h, k) = \sum_{h, k : \phi(h, k) = z}d_{x, y}(h, k)$
+	\subsection{Parlami del valore atteso}
+	Supponendo di avere una variabile aleatoria $X$, di densità $d_x(h)$, il valore atteso di X è: \\\\
+	$E[X] = \sum_{h} h \cdot d_x(h)$. \\ \\
+	Ciò non è altro che una media ponderata.
+	\newpage
+	\subsection{Quali sono le proprietà e le principali caratteristiche del valore atteso?}
+	\textbf{Teorema}\\
+	Sia $\phi: \mathbb{R}^2 \rightarrow \mathbb{R}$ una qualsiasi trasformazione di variabile e sia $X = (x, y)$ Allora (ponendo $z = \phi(X)):$ \\ \\
+	$E[Z] = \sum_{h, k \in \mathbb{R}} \phi(h, k) \cdot d_{x, y}(h, k)$ \\ \\
+	\textbf{Dimostrazione} \\
+	Per dimostrarlo prendiamo come riferimento una funzione $\phi : \mathbb{R}^2 \rightarrow \mathbb{R}$, t.c $\phi(x, y) = x + y = z$ \\ \\
+	$E[z] = \sum_{l} l \cdot d_z(l)$ \\\\
+	$= \sum_{l}l \cdot \sum_{h, k = \phi(h, k) = l} d_{x, y}(h, k)$ \\\\
+	$= \sum_{h, k} \phi(h, k) \cdot d_{x,y}(h, k)$ 
+	\newpage
+	
+	\begin{flushleft}
+		\textbf{Corollario}
+	\end{flushleft}
+	Siano $X, Y$ due variabili aleatorie, non necessariamente indipendenti, allora: \\\\
+	$E[X + Y] = E[X] + E[Y]$ \\ \\
+	\textbf{Dimostrazione} \\
+	Consideriamo una funzione $\phi : \mathbb{R}^2 \rightarrow \mathbb{R}$, la quale ci permette di ottenere: $\phi(x, y) = x + y = Z$, quindi, dal teorema visto precedentemente otteniamo:\\\\
+	$E[Z] = \sum_{h, k} \phi(h, k) \cdot d_{x,y}(h, k)$ \\\\
+	$ = \sum_{h, k} h \cdot d_{x, y}(h, k) + \sum_{h, k} k \cdot d_{x, y}(h, k)$ \\\\
+	$ = \sum_{h}h \cdot \sum_{k}d_{x, y}(h, k) + \sum_{k}k \cdot \sum_{h}d_{x, y}(h, k)$ \\\\
+	$ = \sum_{h}h \cdot d_x(h) + \sum_{k} \cdot d_y(k)$ \\\\
+	$ = E[X] + E[Y]$	
+	\\\\
+	\textbf{Prodotto di variabili} \\
+	Siano $X, Y$ due variabili aleatorie indipendenti, allora: \\\\
+	$E[X \cdot Y] = E[X] \cdot E[Y]$ $\rightarrow$ non vale il viceversa!! \\\\
+	\textbf{Dimostrazione} \\ 
+	Torniamo a sfruttare la funzione $\phi : \mathbb{R}^2 \rightarrow \mathbb{R}$, per il quale $\phi(x, y) = x\cdot y = Z$ \\\\
+	$E[Z] = \sum_{h, k \in \mathbb{R}} \phi(h, k) \cdot d_{x, y}(h, k)$ \\\\
+	$= \sum_{h, k} h \cdot k \cdot d_x(h) \cdot d_y(k)$ \\\\
+	$ = E[X] \cdot E[Y]$
+	
+	\subsection{Definisci la varianza}
+	$Var(x) = E[(x - E[x])^2]$ \\\\
+	Si osserva che: \\\\
+	$Var(x) = E[(x - E[x])^2]$
+	$ = E[x^2 - 2\cdot x \cdot E[x] + E[x]^2]$
+	$ = E[x^2] - E[x]^2$
+	
+	\subsection{Definisci la covarianza}
+	La covarianza permette di osservare la dipendenza presente fra due variabili aleatorie o statistiche, a questo proposito se le variabili sono indipendenti la covarianza sarà = 0. \\
+	Formalmente: \\\\
+	$Cov(x, y) = E[x \cdot y] \cdot E[x]\cdot E[y]$
+	
+	\subsection{Definisci la proprietà più importante della varianza}
+	$Var(x + y) = var(x) + var(y) - 2 \cdot Cov(x, y)$ \\\\
+	Dimostrazione:\\\\
+	$Var(x + y) = E[(x + y)^2] - E[x + y]^2$ \\\\
+	$ = E[x^2] - 2\cdot E[x] \cdot E[y] + E[y^2] - (E[x] \cdot E[y])^2$ \\ \\ 
+	$ = E[x^2] - 2\cdot E[x] \cdot E[y] + E[y^2] -  (E[x]^2 - 2 \cdot E[x] \cdot E[y] + E[y]^2)$ \\\\
+	$ = Var(x) + Var(y) - 2 \cdot Cov(x, y)$
+	
+	\subsection{Spiega la legge dei grandi numeri}
+	Per arrivare ad enunciarla abbiamo bisogno di una famosissima formula di probabilità, che si chiama disuguaglianza di Chebyshev. Ci dà una formula quantitativa che esprime il fatto che la varianza è una misura di dispersione. Nel dettaglio:\\\\
+	\textbf{Disuguaglianza di Chebyshev} \\\\
+	Sia $X$ una variabile aleatoria, allora: \\
+	$P(|X - E[X]| \geq \epsilon) \leq \dfrac{Var(x)}{\epsilon^2}$\\
+	(fissiamo $\epsilon$ = 0.1, qui stiamo calcolando la probabilità che la differenza fra X e la sua media sia maggiore di 0.1. Cosa ci aspettiamo? Se la varianza di questa X è piccola, ci aspettiamo che la probabilità in questione sia piccola. Se X non si disperde assumerà, con buona probabilità, valori vicini al suo valore medio e di conseguenza il valore della probabilità sarà piccolo. La proposizione ci dice che la probabilità in questione è sempre $\leq$ della varianza, anzi è direttamente proporzionale con la varianza. Per $\epsilon$ = 1, la probabilità è minore uguale della varianza. E' una formula quantitativa del fatto che la varianza è una dispersione.)\\\\
+	\textbf{Dimostrazione} \\\\
+	Consideriamo l'evento $A = "|X - E[X]| \geq \epsilon"$. Consideriamo la variabile caratteristica, la $\chi_{A}$ (La $\chi_{A}$ è una variabile di Bernoulli che vale 1 se $A$ accade e vale 0 se $A$ non accade. La probabilità che valga 1 è = $P(A)$). \\
+	Poniamo $Y = \epsilon^2 \chi_{A}$ e $Z = (X - E[X])^2$ \\
+	Osserviamo che sussiste sempre una relazione fra $Y$ e $Z$, cioè che $Y$ $\leq$ $Z$. Infatti: \\\\
+	Caso 1: se $A$ non accade $\rightarrow$ $Y=0$ e $Z \geq 0$ \\
+	Caso 2: se $A$ accade $\rightarrow$ $Y=\epsilon^2$
+	(se $A$ accade, la relazione $|X - E[X]| \geq \epsilon$ è verificata, dunque di conseguenza $|X-E[X]|^2 \geq \epsilon^2$, ma il quadrato di quello di sinistra è proprio $Z$, dunque si può affermare che $Z \ge Y$. )\\\\
+	Se una variabile è sempre minore uguale di un'altra, anche il suo valore atteso sarà minore uguale del valore atteso dell'altra. Da questa considerazione segue che $\rightarrow$ $E[Y] \leq E[Z]$. Ma ora quale è il valore atteso di $Y$? Il valore atteso di $Y$ è $\epsilon^2 E[\chi_{A}]$. Quello di $Z$? Per definizione è la $Var(x)$. Dunque concludiamo con $\epsilon^2 E[\chi_{A}] \leq Var(X)$. Abbiamo $E[\chi_{A}] \leq \dfrac{Var(X)}{\epsilon^2}$, con $E[\chi_{A}] = P(A)$
+	Cosa abbiamo fatto? Abbiamo introdotto due variabili aleatorie, $Y$ e $Z$, abbiamo osservato che, qualunque cosa accada $Y$ è sempre minore di $Z$ e di conseguenza anche $E[Y] \leq E[Z]$. Infine esplicitando i valori attesi si ottiene la disuguaglianza che si vuole dimostrare. \\\\
+	Abbiamo ora questa uguaglianza che vogliamo andare ad utilizzare per dimostrare la legge dei grandi numeri. \\
+	Cosa dice intuitivamente la legge dei grandi numeri? \\
+	Supponiamo di lanciare una moneta, supponiamo di effettuare 100 lanci e in questi 100 lanci di ottenere k volte testa. Ora cosa possiamo dire di k? beh k non è detto che sia 50. Ci aspettiamo che k sia vicino ad 50, cioè il rapporto tra teste e lanci è vicino ad $\dfrac{1}{2}$. Se invece facessi 1000 o 10.000 lanci ci aspetteremmo che aumenti la probabilità che questo rapporto sia vicino ad $\dfrac{1}{2}$. La legge dei grandi numeri dà proprio una interpretazione quantitativa che permette di esprimere questo fatto in modo rigoroso. Stiamo parlando di una convergenza di una successione di variabili aleatorie. \\
+	Formalizzando:\\
+	Abbiamo $n$ lanci, risultati lanci = $x_1, x_2, ..., x_n$. Ognuna che vale 1 o 0 a seconda se ottengo testa o croce. \\Stiamo considerando il rapporto $\dfrac{x_1+x_2+...+x_n}{n} := \bar x_{n}$ (numero di teste ottenute su n lanci).
+	Questa definizione la possiamo considerare per una qualunque successione $x_1, x_2, ..., x_n$ di variabili aleatorie. \\\\
+	\textbf{Definizione}\\\\
+	Prendiamo una successione infinita $x_1, x_2, ...$ di variabili aleatorie. Diciamo che questa successione converge ad un numero $a$ se $\forall \epsilon$ se io vado a calcolare: \\\\
+	$\lim_{n \rightarrow \infty} P(|X_{n} - a| \geq \epsilon) = 0$
+	(l'ennesimo termine della successione sia più distante da $\epsilon$ che da $a$)
+	Noi vogliamo dire che le variabili $\bar x_{n}$, che danno il rapporto di teste, si avvicini ad $\dfrac{1}{2}$. \\\\
+	
+	\textbf{Legge dei grandi numeri} \\\\
+	Supponiamo di avere una successione infinita di variabili aleatorie indipendenti e aventi tutte la stessa densità di media $\mu$ : $x_1, x_2, ...$.
+	Allora:
+	Abbiamo che la successione $\bar x_{n}$ converge a $\mu$. Nel caso delle monete stiamo dicendo che il numero medio di teste ottenute converge ad $\dfrac{1}{2}$
+	\\\\
+	\textbf{Dimostrazione} \\\\
+	Basta applicare Chebyshev alla variabile $\bar x_{n}$.
+	$E[\bar x_{n}] = E[\dfrac{x_1+x_2+...+x_n}{n}] = \mu$ \\\\
+	$Var(\bar x_{n}) = Var(\dfrac{x_1+x_2+...+x_n}{n}) = \dfrac{1}{n^2} n Var(x1)$
+	(Quando una varianza ha una costante è possibile portarla fuori elevata alla seconda).
+	\subsection{Quale è il valore atteso e la varianza di una variabile di Bernoulli?}
+	$E[x] = p$, $var(x) = p \cdot (1 - p)$
+	
+	\newpage
+	
+	\subsection{Definisci la variabile continua}
+	Una variabile aleatoria $X$ è continua se la sua funzione di ripartizione è a sua volta continua. \\
+	Gode di una importante proprietà, ovvero che $P(X = t) = 0$ per ogni numero reale $t$. \\\\
+	\textbf{Dimostrazione} \\\\
+	$P(X = t) \leq P(X \leq t) - P(X \leq t - \dfrac{1}{n})$ \\
+	Per $n$ che tende ad infinito diventa: \\
+	$P(X = t) \leq 0 \rightarrow P(X = t) = 0$ 
+	\subsection{Quale è la densità continua?}
+	La densità continua di una variabile aleatoria continua $X$ è la funzione \\
+	$f_x : \mathbb{R} \rightarrow \mathbb{R}$ definita nel seguente modo:
+	$\int_{a}^{b} f_x(s)ds$. \\
+	Per essere definita tale è necessario che soddisfi due proprietà:
+	\begin{itemize}
+		\item $f_x(s) \geq 0$
+		\item $\int_{-\infty}^{+\infty}f_x(s)ds = 1$
+	\end{itemize}
+	\subsection{Che legame c'è fra una funzione di ripartizione continua e la densità}
+	Dalla densità è possibile ottenere la funzione di ripartizione attraverso l'integrazione, viceversa dalla funzione di ripartizione è possibile ottenere la funzione della densità attraverso il processo di derivazione. Questo è dimostrabile nel seguente modo: \\\\
+	$F_x(t) = P(x \leq t) = P(-\infty \leq x \leq t) = \int_{-\infty}^{t}f(s)$ \\\\
+	$\int_{a}^{b}f_x(s) = P(a \leq x \leq b) = F_x(b) - F_x(a)$ (teorema fondamentale del calcolo integrale)
+	\subsection{Come si trova il valore atteso nell'ambito delle variabili continue?}
+	$E[x] = \int_{-\infty}^{+\infty} f_x(s) \cdot s \cdot ds$ \\\\
+	Le proprietà di cui gode sono le seguenti: 
+	\begin{itemize}
+		\item $E[\alpha X + \beta Y] = \alpha E[X] + \beta E[Y]$
+		\item $E[X + Y] = E[X] + E[Y]$ (in caso di indipendenza)
+	\end{itemize}
+	\subsection{Come si determina la varianza nell'ambito delle variabili continue?}
+	$Var(X) = E[X^2] - E[X]^2$ \\\\
+	Le proprietà di cui gode sono le seguenti: 
+	\begin{itemize}
+		\item $Var(X + Y) = Var(X) + Var(Y)$
+		\item $Var(\alpha X) = \alpha^2 Var(X)$
+	\end{itemize}
+	\subsection{Definisci la densità continua uniforme}
+	Una variabile continua uniforme, definita in un intervallo $[a, b]$, assume valori, in maniera uniforme, solo all'interno dell'intervallo considerato, al di fuori di esso la densità è = 0. Dunque vogliamo che la densità sia costante all'interno dell'intervallo selezionato.\\
+	$f_x(s) = \dfrac{1}{b - a}$ e $F_x(s) = \int_{a}^{b}f(s)ds = [\dfrac{s}{b - a}]_{a}^{b}$ = $\dfrac{s - a}{b - a}$ \\
+	Notiamo che la funzione di ripartizione di una variabile aleatoria continua non è altro che una retta che congiunge l'estremo sinistro con quello destro.
+	\subsection{Definisci la densità continua astratta e la funzione di ripartizione astratta}
+	La densità continua astratta è una funzione $f : \mathbb{R} \rightarrow \mathbb{R}$ che gode delle seguenti proprietà: 
+	\begin{itemize}
+		\item $f_x(s) \geq 0$
+		\item $\int_{-\infty}^{+\infty}f_x(s)ds = 1$
+	\end{itemize}
+	La funzione di ripartizione astratta è una funzione $F : \mathbb{R} \rightarrow \mathbb{R}$ che gode delle seguenti proprietà:
+	\begin{itemize}
+		\item $\lim_{x \rightarrow -\infty}F(x) = 0$ e $\lim_{x \rightarrow \infty}F(x) = 1$
+		\item è debolmente crescente
+	\end{itemize}
+	\subsection{Parlami della densità esponenziale}
+	La variabile esponenziale è una v. aleatoria continua che gode della proprietà di mancanza di memoria, dunque la probabilità che un evento accada non dipende da ciò che è avvenuto prima.
+	La sua densità è la seguente: $a \cdot e^{-as}$ per $s \geq 0$  (assume valore 0 altrimenti). \\
+	La funzione di ripartizione la si ottiene attraverso l'integrazione: \\\\
+	$F_x(t) = \int_{0}^{t}a \cdot e^{-at}dt = [-e^{-at}]_{0}^{t} = 1 - e^{-at}$ \\\\
+	Inoltre è interessante sapere che $E[x] = \dfrac{1}{a}$, questo ci permette di determinare $a$ senza problemi. Infine concludiamo affermando che $Var(x) = \dfrac{1}{a^2}$
+	\subsection{Raccontami la densità normale}
+	Le variabili normali sono definite in funzione di due parametri, $\mu$ e $\sigma^2$, ovvero il valore atteso e la varianza. Si tratta di una distribuzione di probabilità continua che è spesso usata come
+	prima approssimazione per descrivere variabili aleatorie a valori reali che tendono a
+	concentrarsi attorno a un singolo valore medio. Il grafico della sua densità è una campana simmetrica, dunque assume valori con frequenza più alta al centro e tende a diminuire spostandosi negli estremi. La variabile normale standard, che indichiamo con $\zeta_{0}$ non è altro che una variabile normale con $\mu$ = 0 e $\sigma^2$ = 1, la sua funzione di ripartizione astratta è la seguente: $f(s) = \dfrac{1}{\sqrt{2 \pi}} \cdot e^{\tfrac{-s^2}{2}}$.
+\end{document} 
